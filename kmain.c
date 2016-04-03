@@ -36,11 +36,6 @@ void putch(char c) {
     mem_putch(c, mem_default_mode);
 }
 
-//void putch(int n) {
-//    mem_putch(n - '0', mem_default_mode);
-//}
-
-
 void kprintf(const char *str) {
     unsigned int i = 0; 
     unsigned int len = strlen(str);
@@ -52,9 +47,15 @@ void kprintf(const char *str) {
 
 void kmain() {	
 	mem_init();
-
-	putch('0' + strlen("Hello")); 
-	kprintf("Hello");
+    
+    putch('C');
+    putch('a');
+    putch('O');
+    putch('S');
+    putch('L');
+    
+	putch('0' + strlen("Hello"));
+	//kprintf("Hello");
 
 	for(;;);
 }
