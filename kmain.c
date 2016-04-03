@@ -39,23 +39,16 @@ void putch(char c) {
 void kprintf(const char *str) {
     unsigned int i = 0; 
     unsigned int len = strlen(str);
-    putch('0' + len);
-    //for(i = 0; i < len; i++) {
-    //	putch('0' + i);
-    //}
+
+    for(i = 0; i < len; i++) {
+    	putch(str[i]);
+    }
 }
 
 void kmain() {	
 	mem_init();
     
-    putch('C');
-    putch('a');
-    putch('O');
-    putch('S');
-    putch('L');
-    
-	putch('0' + strlen("Hello"));
-	//kprintf("Hello");
+	kprintf("CaOS - v 0.1 alpha");
 
 	for(;;);
 }
